@@ -1,5 +1,5 @@
 {
-  "name": "@goestav/nx-semantic-release",
+  "name": "@goestav.x/nx-semantic-release",
   "version": "0.0.0",
   "description": "Semantic release for NX with support for ESM.",
   "publishConfig": {

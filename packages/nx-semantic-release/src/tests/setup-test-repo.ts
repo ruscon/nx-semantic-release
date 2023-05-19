@@ -117,7 +117,7 @@ async function bootstrapTestProjectsAndLibs() {
   updateWorkspaceNxConfig();
   linkDependencies();
   await runNxCommandAsync(
-    `generate @goestav/nx-semantic-release:install --repositoryUrl=file://${remoteGitPath} --enforceConventionalCommits=false`
+    `generate @goestav.x/nx-semantic-release:install --repositoryUrl=file://${remoteGitPath} --enforceConventionalCommits=false`
   );
 
   configureSemanticReleaseForProject('app-a', {
@@ -166,7 +166,7 @@ async function bootstrapTestProjectsAndLibs() {
     },
   });
   configureSemanticReleaseForProject('common-lib', {
-    executor: '@goestav/nx-semantic-release:semantic-release',
+    executor: '@goestav.x/nx-semantic-release:semantic-release',
     options: {
       dryRun: false,
       buildTarget: 'build',
@@ -268,7 +268,7 @@ function configureSemanticReleaseForProject(
     targets: {
       ...projectConfiguration.targets,
       'semantic-release': {
-        executor: '@goestav/nx-semantic-release:semantic-release',
+        executor: '@goestav.x/nx-semantic-release:semantic-release',
         options,
       },
     },

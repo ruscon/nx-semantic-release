@@ -1,4 +1,4 @@
-# @goestav/nx-semantic-release
+# @goestav.x/nx-semantic-release
 
 > This fork supports the [ESM import syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
 
@@ -16,8 +16,8 @@ Under the hood, it uses project graph from nx to analyze commits for every confi
 Run:
 
 ```shell
-npm install -D @goestav/nx-semantic-release
-nx g @goestav/nx-semantic-release:install
+npm install -D @goestav.x/nx-semantic-release
+nx g @goestav.x/nx-semantic-release:install
 ```
 
 For now this package supports only <b>Independent</b> versioning mode, synced mode is planned to be added soon.
@@ -30,12 +30,12 @@ configuration looks like this:
 ```json
 {
   "semantic-release": {
-    "executor": "@goestav/nx-semantic-release:semantic-release"
+    "executor": "@goestav.x/nx-semantic-release:semantic-release"
   }
 }
 ```
 
-> Hint: You can also use our generator `nx g @goestav/nx-semantic-release:setup-project $PROJECT_NAME` to generate this configuration.
+> Hint: You can also use our generator `nx g @goestav.x/nx-semantic-release:setup-project $PROJECT_NAME` to generate this configuration.
 
 After running this, the executor will do the following:
 
