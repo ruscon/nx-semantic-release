@@ -1,4 +1,4 @@
-# @goestav.x/nx-semantic-release
+# @goestav/nx-semantic-release
 
 > This fork supports the [ESM import syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
 
@@ -16,8 +16,8 @@ Under the hood, it uses project graph from nx to analyze commits for every confi
 Run:
 
 ```shell
-npm install -D @goestav.x/nx-semantic-release
-nx g @goestav.x/nx-semantic-release:install
+npm install -D @goestav/nx-semantic-release
+nx g @goestav/nx-semantic-release:install
 ```
 
 For now this package supports only <b>Independent</b> versioning mode, synced mode is planned to be added soon.
@@ -30,12 +30,12 @@ configuration looks like this:
 ```json
 {
   "semantic-release": {
-    "executor": "@goestav.x/nx-semantic-release:semantic-release"
+    "executor": "@goestav/nx-semantic-release:semantic-release"
   }
 }
 ```
 
-> Hint: You can also use our generator `nx g @goestav.x/nx-semantic-release:setup-project $PROJECT_NAME` to generate this configuration.
+> Hint: You can also use our generator `nx g @goestav/nx-semantic-release:setup-project $PROJECT_NAME` to generate this configuration.
 
 After running this, the executor will do the following:
 
@@ -82,7 +82,7 @@ The following examples are all the same.
 ```json
 {
   "nxrelease": {
-    "repositoryUrl": "https://github.com/TheUnderScorer/nx-semantic-release"
+    "repositoryUrl": "https://github.com/goestav/nx-semantic-release"
   }
 }
 ```
@@ -91,21 +91,21 @@ The following examples are all the same.
 
 ```yaml
 ---
-repositoryUrl: 'https://github.com/TheUnderScorer/nx-semantic-release'
+repositoryUrl: 'https://github.com/goestav/nx-semantic-release'
 ```
 
 - Via `nxrelease.config.js` file:
 
 ```js
 module.exports = {
-  repositoryUrl: 'https://github.com/TheUnderScorer/nx-semantic-release',
+  repositoryUrl: 'https://github.com/goestav/nx-semantic-release',
 };
 ```
 
 - Via CLI arguments:
 
 ```
-$ nx semantic-release app-c --repositoryUrl "https://github.com/TheUnderScorer/nx-semantic-release"
+$ nx semantic-release app-c --repositoryUrl "https://github.com/goestav/nx-semantic-release"
 ```
 
 ### Available Options

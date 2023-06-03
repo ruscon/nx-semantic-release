@@ -17,7 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@goestav.x/nx-semantic-release": [
+      "@goestav/nx-semantic-release": [
         "packages/nx-semantic-release/src/index.ts"
       ]
     }

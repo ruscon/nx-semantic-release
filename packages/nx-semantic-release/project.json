@@ -52,7 +52,7 @@
       }
     },
     "semantic-release": {
-      "executor": "@goestav.x/nx-semantic-release:semantic-release",
+      "executor": "@goestav/nx-semantic-release:semantic-release",
       "options": {
         "branches": [
           "master",

@@ -1,5 +1,5 @@
 {
-  "npmScope": "theunderscorer",
+  "npmScope": "goestav",
   "affected": {
     "defaultBase": "master"
   },
@@ -7,18 +7,9 @@
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken": "NDE5MzEzNzgtNDA2ZC00NDE1LWE0YTktMjlmYzU2MjJhNmM1fHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "parallel": 1,
-        "strictlyOrderedTargets": [
-          "build",
-          "semantic-release"
-        ]
+        "strictlyOrderedTargets": ["build", "semantic-release"]
       }
     }
   },
@@ -29,38 +20,21 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     },
     "semantic-release": {
-      "dependsOn": [
-        "^release"
-      ]
+      "dependsOn": ["^release"]
     },
     "test": {
-      "inputs": [
-        "default",
-        "^production",
-        "{workspaceRoot}/jest.preset.js"
-      ]
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
     "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json"
-      ]
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
     }
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": [
       "{workspaceRoot}/workspace.json",
       "{workspaceRoot}/tsconfig.base.json",

@@ -88,7 +88,7 @@ export async function semanticRelease(
   const release = await getSemanticRelease();
 
   await release({
-    extends: '@goestav.x/nx-semantic-release',
+    extends: '@goestav/nx-semantic-release',
     ...resolvedOptions,
     tagFormat,
     plugins,
