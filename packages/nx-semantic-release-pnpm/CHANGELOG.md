@@ -1,3 +1,43 @@
+## 1.0.0 (2023-08-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* this package requires node version >= 16 from now on
+
+### Features
+
+* Add support for global configuration ([9ec58f4](https://github.com/ruscon/nx-semantic-release-pnpm/commit/9ec58f43e529509792777cd7ebc9d21f0ddf4a7b))
+* initial release ([c196a27](https://github.com/ruscon/nx-semantic-release-pnpm/commit/c196a279a299ab4228037f7ea81e1726a61c93f9))
+* Introduce [only] flag for including only selected projects for given commit ([f0c4021](https://github.com/ruscon/nx-semantic-release-pnpm/commit/f0c40219f4ac7a7a59741bf7b94ac760e360307c))
+* Introduce @theunderscorer/nx-semantic-release:install generator ([22aaec8](https://github.com/ruscon/nx-semantic-release-pnpm/commit/22aaec88b3ffb7e42764d38bf32e30bb9995cb39))
+* set minimal required node version to 16 ([390b2af](https://github.com/ruscon/nx-semantic-release-pnpm/commit/390b2af17ee01c20ac68a08c67a9e49c0205bf76))
+* support latest NX version ([ade9bd1](https://github.com/ruscon/nx-semantic-release-pnpm/commit/ade9bd17b3c2644a6c8ad9eac200998b66f90226))
+* Support latest nx version (14.1.5) ([3d0b5d1](https://github.com/ruscon/nx-semantic-release-pnpm/commit/3d0b5d151d5b86359f9c48710da52db4ffeac5ca))
+* Support latest nx version (14.3.6) ([31b897c](https://github.com/ruscon/nx-semantic-release-pnpm/commit/31b897cbd36881918910ab7a53bb58d9baa17edb))
+* update nx to 15.9.2 ([a09aba5](https://github.com/ruscon/nx-semantic-release-pnpm/commit/a09aba58346cc4d9280ce3c9ce31b92398daebcb))
+* Update to latest nx version (13.10.2) ([34ea0d6](https://github.com/ruscon/nx-semantic-release-pnpm/commit/34ea0d6c5006c6c46e8ecb5bde2a1a8bcdf05a88))
+* update to nx 16 ([8d70eed](https://github.com/ruscon/nx-semantic-release-pnpm/commit/8d70eed0c055862322a1943ea9f5a2597e998885))
+* use pnpm publish instead of npm ([3ce8272](https://github.com/ruscon/nx-semantic-release-pnpm/commit/3ce82729b85a679874da9fde88a368884cef674f))
+
+
+### Bug Fixes
+
+* Add missing "semantic-release-plugin-decorators" dependency to the package ([719b39a](https://github.com/ruscon/nx-semantic-release-pnpm/commit/719b39a67eebcbc5b9e816baa7ee8f8f3f9a7b42))
+* add missing [@semantic-release](https://github.com/semantic-release) dependencies ([02c79f1](https://github.com/ruscon/nx-semantic-release-pnpm/commit/02c79f125de9039a9af4ed09443b7e93c5a20319))
+* Add other missing dependencies ([4b6cc98](https://github.com/ruscon/nx-semantic-release-pnpm/commit/4b6cc98509d2754bc08d20f1838f2e5c9b049651))
+* **nx-semantic-release:** add ESM support ([ee7c63d](https://github.com/ruscon/nx-semantic-release-pnpm/commit/ee7c63dd9c34c503ef9e362c193943803bae721e))
+* replace all occurences of a token in an option, not only the first one ([320877a](https://github.com/ruscon/nx-semantic-release-pnpm/commit/320877ab70ceaac58bfc37cfa5de4b7265284cbf))
+* Use dependencies instead of peerDependencies ([aa1fc19](https://github.com/ruscon/nx-semantic-release-pnpm/commit/aa1fc1979ab22c01b05969ead3591081a7222873))
+
+
+### Build System
+
+* **deps:** add @nrwl/tao as dependency ([3da27fc](https://github.com/ruscon/nx-semantic-release-pnpm/commit/3da27fc7283ecb7ccf75e0ae179e81a4e147a4e0))
+* **deps:** update and freeze dependencies ([7902b33](https://github.com/ruscon/nx-semantic-release-pnpm/commit/7902b3360a76b3976f7c610f4753af2910181114))
+* **deps:** update nx ([3b28226](https://github.com/ruscon/nx-semantic-release-pnpm/commit/3b2822685d0a6c1dff33d0115f14f2dee0512ee4))
+* **deps:** update semantic-release to 20.1.0 ([aa41541](https://github.com/ruscon/nx-semantic-release-pnpm/commit/aa4154160feaf97b443dfb4cd702518991c63ef7))
+
 ## 1.0.0 (2023-06-03)
 
 
