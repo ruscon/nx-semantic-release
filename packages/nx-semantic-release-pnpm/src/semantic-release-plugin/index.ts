@@ -3,7 +3,7 @@ import { getCommitsForProject } from './analyze-commits';
 
 export * from './executor-context';
 
-const wrapperName = 'nx-semantic-release';
+const wrapperName = 'nx-semantic-release-pnpm';
 
 const analyzeCommits = wrapStep('analyzeCommits', getCommitsForProject(true), {
   wrapperName,

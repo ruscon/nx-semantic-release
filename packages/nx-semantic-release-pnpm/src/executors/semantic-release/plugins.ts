@@ -22,7 +22,7 @@ const getNpmPlugin = (
   if (buildPkgRoot && fs.existsSync(buildPkgRoot)) {
     // Bump package.json version for built project, so that it can be published to NPM with correct version (if package is public)
     plugins.push([
-      '@semantic-release/npm',
+      '@colbyfayock/semantic-release-pnpm',
       {
         pkgRoot: options.outputPath,
       },
@@ -32,7 +32,7 @@ const getNpmPlugin = (
   if (fs.existsSync(projectPkgPath)) {
     // Bump package.json in project itself
     plugins.push([
-      '@semantic-release/npm',
+      '@colbyfayock/semantic-release-pnpm',
       {
         pkgRoot: packageJsonDir,
         npmPublish: false,

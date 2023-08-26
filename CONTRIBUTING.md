@@ -1,4 +1,4 @@
-# Contributing to nx-semantic-release
+# Contributing to nx-semantic-release-pnpm
 
 Do you want to contribute to the project? Thats great! 🎉
 

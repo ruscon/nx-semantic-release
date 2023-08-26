@@ -1,5 +1,5 @@
 {
-  "name": "@goestav/nx-semantic-release",
+  "name": "@ruscon/nx-semantic-release-pnpm",
   "version": "1.0.0",
   "description": "Semantic release for NX with support for ESM.",
   "publishConfig": {
@@ -7,11 +7,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "@colbyfayock/semantic-release-pnpm": "^1.0.7",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.7",
-    "@semantic-release/npm": "^9.0.2"
+    "@semantic-release/github": "^8.0.7"
   },
   "private": false,
   "author": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/goestav/nx-semantic-release"
+    "url": "https://github.com/ruscon/nx-semantic-release-pnpm"
   },
   "engines": {
     "node": ">=16.0.0"

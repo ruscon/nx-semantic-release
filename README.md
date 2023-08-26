@@ -1,6 +1,6 @@
-# @goestav/nx-semantic-release
+# @ruscon/nx-semantic-release-pnpm
 
-> This fork supports the [ESM import syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
+> This fork supports the [ESM import syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) for PNPM publish.
 
 [nx](https://nx.dev/) plugin for automated releases, powered
 by [semantic-release](https://github.com/semantic-release/semantic-release)
@@ -16,8 +16,8 @@ Under the hood, it uses project graph from nx to analyze commits for every confi
 Run:
 
 ```shell
-npm install -D @goestav/nx-semantic-release
-nx g @goestav/nx-semantic-release:install
+pnpm install -D @ruscon/nx-semantic-release-pnpm
+pnpm nx g @ruscon/nx-semantic-release-pnpm:install
 ```
 
 For now this package supports only <b>Independent</b> versioning mode, synced mode is planned to be added soon.
@@ -30,12 +30,12 @@ configuration looks like this:
 ```json
 {
   "semantic-release": {
-    "executor": "@goestav/nx-semantic-release:semantic-release"
+    "executor": "@ruscon/nx-semantic-release-pnpm:semantic-release"
   }
 }
 ```
 
-> Hint: You can also use our generator `nx g @goestav/nx-semantic-release:setup-project $PROJECT_NAME` to generate this configuration.
+> Hint: You can also use our generator `nx g @ruscon/nx-semantic-release-pnpm:setup-project $PROJECT_NAME` to generate this configuration.
 
 After running this, the executor will do the following:
 
@@ -45,7 +45,7 @@ After running this, the executor will do the following:
   - @semantic-release/commit-analyzer
   - @semantic-release/release-notes-generator
   - @semantic-release/changelog
-  - @semantic-release/npm
+  - @colbyfayock/semantic-release-pnpm
   - @semantic-release/git
   - @semantic-release/github
 - The result will be a fully versioned project. If you are releasing it as npm package, the package will be built,
@@ -69,7 +69,7 @@ _Note:_ Object/Array type options are shallowly merged. For example, if gitAsset
 
 ### Configuration file
 
-nx-semantic-release's options can be set globally via either:
+nx-semantic-release-pnpm's options can be set globally via either:
 
 - a `nxrelease` key in the project's `package.json` file
 - a `.nxreleaserc` file, written in YAML or JSON, with optional extensions: `.yaml`/`.yml`/`.json`/`.js`
@@ -82,7 +82,7 @@ The following examples are all the same.
 ```json
 {
   "nxrelease": {
-    "repositoryUrl": "https://github.com/goestav/nx-semantic-release"
+    "repositoryUrl": "https://github.com/ruscon/nx-semantic-release-pnpm"
   }
 }
 ```
@@ -91,21 +91,21 @@ The following examples are all the same.
 
 ```yaml
 ---
-repositoryUrl: 'https://github.com/goestav/nx-semantic-release'
+repositoryUrl: 'https://github.com/ruscon/nx-semantic-release-pnpm'
 ```
 
 - Via `nxrelease.config.js` file:
 
 ```js
 module.exports = {
-  repositoryUrl: 'https://github.com/goestav/nx-semantic-release',
+  repositoryUrl: 'https://github.com/ruscon/nx-semantic-release-pnpm',
 };
 ```
 
 - Via CLI arguments:
 
 ```
-$ nx semantic-release app-c --repositoryUrl "https://github.com/goestav/nx-semantic-release"
+$ pnpm nx semantic-release app-c --repositoryUrl "https://github.com/ruscon/nx-semantic-release-pnpm"
 ```
 
 ### Available Options
@@ -206,7 +206,7 @@ You can also use **one single** `[skip my-app1, my-app2]` to skip commits relate
 You can release multiple apps/libraries at once by using `nx run-many`:
 
 ```shell
-npx nx run-many --target=semantic-release --parallel=false
+pnpm nx run-many --target=semantic-release --parallel=false
 ```
 
 > Note: `--parallel=false` is required to run tasks sequentially, otherwise `nx run-many` will run tasks in parallel and semantic-release will fail.
@@ -236,7 +236,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npx nx run my-app:semantic-release
+      - run: pnpm nx run my-app:semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```

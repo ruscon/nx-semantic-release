@@ -1,20 +1,17 @@
 import { logger } from '@nx/devkit';
-import { exec } from '../packages/nx-semantic-release/src/utils/exec';
-import { config } from 'dotenv';
-
-config();
+import { exec } from '../packages/nx-semantic-release-pnpm/src/utils/exec';
 
 async function main() {
   logger.log('Starting package release...');
 
-  await exec('npm run build:skip-cache', {
+  await exec('pnpm run build:skip-cache', {
     verbose: true,
   });
 
-  await exec('npm link dist/packages/nx-semantic-release');
-  await exec('npm install');
+  // await exec('pnpm link dist/packages/nx-semantic-release-pnpm');
+  // await exec('pnpm install');
 
-  await exec('nx run nx-semantic-release:semantic-release --verbose', {
+  await exec('pnpm nx run nx-semantic-release-pnpm:semantic-release --verbose', {
     verbose: true,
   });
 

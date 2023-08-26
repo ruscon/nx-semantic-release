@@ -17,8 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@goestav/nx-semantic-release": [
-        "packages/nx-semantic-release/src/index.ts"
+      "@ruscon/nx-semantic-release-pnpm": [
+        "packages/nx-semantic-release-pnpm/src/index.ts"
       ]
     }
   },

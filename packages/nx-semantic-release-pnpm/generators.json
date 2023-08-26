@@ -1,17 +1,17 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "name": "nx-semantic-release-plugin",
+  "name": "nx-semantic-release-pnpm-plugin",
   "version": "0.0.1",
   "generators": {
     "install": {
       "factory": "./src/generators/install/generator",
       "schema": "./src/generators/install/schema.json",
-      "description": "@goestav/nx-semantic-release installator"
+      "description": "@ruscon/nx-semantic-release-pnpm installator"
     },
     "setup-project": {
       "factory": "./src/generators/setup-project/generator",
       "schema": "./src/generators/setup-project/schema.json",
-      "description": "@goestav/nx-semantic-release executor for setting up releases for project"
+      "description": "@ruscon/nx-semantic-release-pnpm executor for setting up releases for project"
     }
   }
 }

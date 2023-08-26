@@ -8,13 +8,13 @@ export async function setupTestNxWorkspace() {
 
     console.info('Setting up at test nx workspace at:', tmpProjPath());
 
-    const distPath = 'dist/packages/nx-semantic-release';
+    const distPath = 'dist/packages/nx-semantic-release-pnpm';
 
     if (!fs.existsSync(distPath)) {
       throw new Error(`Nx plugin dist folder does not exist at: ${distPath}`);
     }
 
-    ensureNxProject('@goestav/nx-semantic-release', distPath);
+    ensureNxProject('@ruscon/nx-semantic-release-pnpm', distPath);
   } catch (error) {
     console.error('Failed to setup test Nx workspace', error);
 

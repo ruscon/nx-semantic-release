@@ -88,7 +88,7 @@ export async function semanticRelease(
   const release = await getSemanticRelease();
 
   await release({
-    extends: '@goestav/nx-semantic-release',
+    extends: '@ruscon/nx-semantic-release-pnpm',
     ...resolvedOptions,
     tagFormat,
     plugins,

@@ -1,4 +1,4 @@
-import { Context } from 'semantic-release';
+import { Context } from "semantic-release";
 
 export const createFakeSemanticReleaseLogger = () =>
   ({

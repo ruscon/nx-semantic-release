@@ -1,21 +1,21 @@
 {
-  "name": "nx-semantic-release",
+  "name": "nx-semantic-release-pnpm",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/nx-semantic-release/src",
+  "sourceRoot": "packages/nx-semantic-release-pnpm/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/nx-semantic-release/**/*.ts"]
+        "lintFilePatterns": ["packages/nx-semantic-release-pnpm/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/packages/nx-semantic-release"],
+      "outputs": ["{workspaceRoot}/coverage/packages/nx-semantic-release-pnpm"],
       "options": {
-        "jestConfig": "packages/nx-semantic-release/jest.config.ts",
+        "jestConfig": "packages/nx-semantic-release-pnpm/jest.config.ts",
         "passWithNoTests": true
       },
       "dependsOn": [
@@ -28,17 +28,17 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/nx-semantic-release",
-        "tsConfig": "packages/nx-semantic-release/tsconfig.lib.json",
-        "packageJson": "packages/nx-semantic-release/package.json",
+        "outputPath": "dist/packages/nx-semantic-release-pnpm",
+        "tsConfig": "packages/nx-semantic-release-pnpm/tsconfig.lib.json",
+        "packageJson": "packages/nx-semantic-release-pnpm/package.json",
         "buildableProjectDepsInPackageJsonType": "dependencies",
-        "main": "packages/nx-semantic-release/src/index.ts",
+        "main": "packages/nx-semantic-release-pnpm/src/index.ts",
         "assets": [
-          "packages/nx-semantic-release/*.md",
-          "packages/nx-semantic-release/**/files/*",
-          "packages/nx-semantic-release/builders.json",
+          "packages/nx-semantic-release-pnpm/*.md",
+          "packages/nx-semantic-release-pnpm/**/files/*",
+          "packages/nx-semantic-release-pnpm/builders.json",
           {
-            "input": "packages/nx-semantic-release",
+            "input": "packages/nx-semantic-release-pnpm",
             "glob": "**/*.json",
             "ignore": ["**/tsconfig*.json", "project.json", "node_modules/**"],
             "output": "/"
@@ -52,7 +52,7 @@
       }
     },
     "semantic-release": {
-      "executor": "@goestav/nx-semantic-release:semantic-release",
+      "executor": "@ruscon/nx-semantic-release-pnpm:semantic-release",
       "options": {
         "branches": [
           "master",
@@ -61,10 +61,10 @@
             "prerelease": true
           }
         ],
-        "buildTarget": "nx-semantic-release:build",
-        "repositoryUrl": "https://github.com/goestav/nx-semantic-release",
+        "buildTarget": "nx-semantic-release-pnpm:build",
+        "repositoryUrl": "https://github.com/ruscon/nx-semantic-release-pnpm",
         "github": true,
-        "outputPath": "dist/packages/nx-semantic-release",
+        "outputPath": "dist/packages/nx-semantic-release-pnpm",
         "releaseRules": [
           {
             "type": "build",
