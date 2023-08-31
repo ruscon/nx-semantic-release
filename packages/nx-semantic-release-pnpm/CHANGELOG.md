@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ruscon/nx-semantic-release-pnpm/compare/nx-semantic-release-pnpm-v1.0.0...nx-semantic-release-pnpm-v1.0.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* make ${PROJECT_DIR} relative ([da9a52f](https://github.com/ruscon/nx-semantic-release-pnpm/commit/da9a52fad17c13eb138dbb7820858910b1febc6e))
+
 ## 1.0.0 (2023-08-26)
 
 
