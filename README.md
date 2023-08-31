@@ -136,11 +136,11 @@ $ pnpm nx semantic-release app-c --repositoryUrl "https://github.com/ruscon/nx-s
 
 ### Available Tokens
 
-| Token            | Expands into                                                                                  |
-| ---------------- | --------------------------------------------------------------------------------------------- |
-| ${PROJECT_DIR}   | Resolves to the current project direcory (ex. `/Users/theunderscorer/nx-monorepo/apps/app-a`) |
-| ${PROJECT_NAME}  | Resolves to the current project name (ex. `app-a`)                                            |
-| ${WORKSPACE_DIR} | Resolves to the current workspace direcory (ex. `/Users/theunderscorer/nx-monorepo`)          |
+| Token            | Expands into                                                                         |
+| ---------------- |--------------------------------------------------------------------------------------|
+| ${PROJECT_DIR}   | Resolves to the project's current *relative* directory (ex. `apps/app-a`)            |
+| ${PROJECT_NAME}  | Resolves to the current project name (ex. `app-a`)                                   |
+| ${WORKSPACE_DIR} | Resolves to the current workspace direcory (ex. `/Users/theunderscorer/nx-monorepo`) |
 
 The following options support tokens: `buildTarget`, `changelogFile`, `commitMessage`, `gitAssets`, `packageJsonDir`, `outputPath`, `plugins`'s options<sup>\*</sup>, and `tagFormat`.
 

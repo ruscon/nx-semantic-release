@@ -19,6 +19,7 @@ import { unwrapExecutorOptions } from '../../utils/executor';
 import { applyTokensToSemanticReleaseOptions } from '../../config/apply-tokens';
 import { getDefaultProjectRoot, GetProjectContext } from '../../common/project';
 import { createProjectGraphAsync } from '@nx/devkit';
+import path from "path";
 
 export type SemanticReleaseOptions = Omit<
   BaseSemanticReleaseOptions,
@@ -139,7 +140,7 @@ export function resolveOptions(
 
   return applyTokensToSemanticReleaseOptions(mergedOptions, {
     projectName: context.projectName as string,
-    projectDir: getDefaultProjectRoot(context),
+    projectDir: path.relative(context.cwd, getDefaultProjectRoot(context)),
     workspaceDir: workspaceRoot,
   });
 }

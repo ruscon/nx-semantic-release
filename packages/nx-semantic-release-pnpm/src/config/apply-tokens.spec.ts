@@ -29,9 +29,9 @@ describe('applyTokensToSemanticReleaseOptions', () => {
       commitMessage: 'release ${PROJECT_NAME} in ${PROJECT_DIR}',
       packageJsonDir: '${PROJECT_DIR}/src',
       tagFormat: '${PROJECT_NAME}-v${version}',
-      outputPath: '${WORKSPACE_DIR}/dist/apps/${PROJECT_NAME}',
+      outputPath: 'dist/apps/${PROJECT_NAME}',
       plugins: [
-        '@fake/plugin-without-options1', 
+        '@fake/plugin-without-options1',
         [
           '@semantic-release/exec',
           {
@@ -42,7 +42,7 @@ describe('applyTokensToSemanticReleaseOptions', () => {
             fakeNumberOption: 10
           }
         ],
-        '@fake/plugin-without-options2', 
+        '@fake/plugin-without-options2',
     ]
     };
   });
@@ -73,7 +73,7 @@ describe('applyTokensToSemanticReleaseOptions', () => {
       mockTokens
     );
 
-    expect(results.outputPath).toEqual(`./dist/apps/app-a`);
+    expect(results.outputPath).toEqual(`dist/apps/app-a`);
   });
 
   it('should return options with multiple tokens replaced', () => {
@@ -83,7 +83,7 @@ describe('applyTokensToSemanticReleaseOptions', () => {
     );
 
     expect(results.commitMessage).toEqual(`release app-a in apps/app-a`);
-    expect(results.outputPath).toEqual(`./dist/apps/app-a`);
+    expect(results.outputPath).toEqual(`dist/apps/app-a`);
   });
 
 
@@ -94,7 +94,7 @@ describe('applyTokensToSemanticReleaseOptions', () => {
     );
 
     expect(results.plugins).toEqual([
-      '@fake/plugin-without-options1', 
+      '@fake/plugin-without-options1',
       [
         '@semantic-release/exec',
         {
@@ -105,7 +105,7 @@ describe('applyTokensToSemanticReleaseOptions', () => {
           fakeNumberOption: 10
         }
       ],
-      '@fake/plugin-without-options2', 
+      '@fake/plugin-without-options2',
   ]);
   });
 });
