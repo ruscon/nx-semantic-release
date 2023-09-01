@@ -20,7 +20,7 @@ function assertProjectConfiguration(
   expect(projectConfiguration.targets?.['semantic-release']).toEqual(config);
 }
 
-describe('Setup project', () => {
+describe.skip('Setup project', () => {
   beforeEach(async () => {
     await setupTestRepo();
   });

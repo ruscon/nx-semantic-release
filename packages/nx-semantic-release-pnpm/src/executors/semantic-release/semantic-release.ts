@@ -1,3 +1,4 @@
+import path from "path";
 import {
   ExecutorContext,
   parseTargetString,
@@ -8,6 +9,8 @@ import {
 import { cosmiconfigSync } from 'cosmiconfig';
 import type release from 'semantic-release';
 import {
+  Config,
+  Options,
   Options as BaseSemanticReleaseOptions,
   PluginSpec,
 } from 'semantic-release';
@@ -19,7 +22,6 @@ import { unwrapExecutorOptions } from '../../utils/executor';
 import { applyTokensToSemanticReleaseOptions } from '../../config/apply-tokens';
 import { getDefaultProjectRoot, GetProjectContext } from '../../common/project';
 import { createProjectGraphAsync } from '@nx/devkit';
-import path from "path";
 
 export type SemanticReleaseOptions = Omit<
   BaseSemanticReleaseOptions,
@@ -105,11 +107,18 @@ export async function semanticRelease(
  * */
 function getSemanticRelease() {
   const fn = new Function(
-    'return import("semantic-release").then(m => m.default)'
+      'return import("semantic-release").then(m => m.default)'
   );
 
   return fn() as Promise<typeof release>;
 }
+
+/**
+ * TODO: when NX will support plugins in ESM
+ */
+// async function getSemanticRelease(): Promise<typeof release> {
+//   return (options: Options, environment?: Config) => import('semantic-release').then(({default: semanticRelease}) => semanticRelease(options, environment));
+// }
 
 function extractBuildTargetParams(
   buildTarget: string,

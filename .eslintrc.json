@@ -2,7 +2,23 @@
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["@nx"],
+  "parserOptions": {
+    "project": ["tsconfig.eslint.json", "packages/*/tsconfig.json"]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": ["*.ts", "*.mts", "*.сts", "*.tsx"]
+    }
+  },
   "overrides": [
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        // https://nx.dev/packages/eslint-plugin/documents/dependency-checks#overriding-defaults
+        "@nx/dependency-checks": "error"
+      }
+    },
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {

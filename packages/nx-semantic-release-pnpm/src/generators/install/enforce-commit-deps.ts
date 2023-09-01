@@ -48,7 +48,7 @@ function setupHuskyConfig(tree: Tree) {
   const hasConfigFile: boolean = tree.exists('.husky/commit-msg');
 
   if (!hasConfigFile) {
-    const commitMsg = `#!/bin/sh\n. "$(dirname "$0")/_/husky.sh"\n\nnpx --no-install commitlint --edit $1\n`;
+    const commitMsg = `#!/bin/sh\n. "$(dirname "$0")/_/husky.sh"\n\npnpm --no-install commitlint --edit $1\n`;
 
     tree.write('.husky/commit-msg', commitMsg, {
       mode: constants.S_IRWXU,

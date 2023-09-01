@@ -1,4 +1,4 @@
-import type { Commit, Context } from 'semantic-release';
+import type { Commit, BaseContext } from 'semantic-release';
 import process from 'process';
 import { ProjectGraph } from '@nx/devkit';
 import { exec } from '../utils/exec';
@@ -10,7 +10,7 @@ interface CommitAffectingProjectsParams {
   projects: string[];
   // Name of root project
   projectName: string;
-  context: Pick<Context, 'logger'>;
+  context: Pick<BaseContext, 'logger'>;
   verbose?: boolean;
   graph: ProjectGraph;
 }

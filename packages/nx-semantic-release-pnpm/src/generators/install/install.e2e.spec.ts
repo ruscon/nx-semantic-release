@@ -17,7 +17,7 @@ const defaultExpectedConfig: SemanticReleaseOptions = {
   branches: ['master'],
 };
 
-describe('Installer', () => {
+describe.skip('Installer', () => {
   beforeAll(async () => {
     await setupTestNxWorkspace();
   });

@@ -10,9 +10,9 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "target": "es2021",
+    "target": "es2022",
     "module": "esnext",
-    "lib": ["es2021", "dom"],
+    "lib": ["es2022", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -22,5 +22,5 @@
       ]
     }
   },
-  "exclude": ["node_modules", "tmp", "test-repos"]
+  "exclude": ["node_modules", "tmp", "test-repos", "git-server"]
 }

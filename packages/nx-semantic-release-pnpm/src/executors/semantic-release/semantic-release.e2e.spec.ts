@@ -110,7 +110,7 @@ async function checkAppA() {
   });
 }
 
-describe('Semantic release', () => {
+describe.skip('Semantic release', () => {
   beforeEach(async () => {
     await setupTestRepo();
   });

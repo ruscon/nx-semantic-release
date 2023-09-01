@@ -31,7 +31,6 @@
         "outputPath": "dist/packages/nx-semantic-release-pnpm",
         "tsConfig": "packages/nx-semantic-release-pnpm/tsconfig.lib.json",
         "packageJson": "packages/nx-semantic-release-pnpm/package.json",
-        "buildableProjectDepsInPackageJsonType": "dependencies",
         "main": "packages/nx-semantic-release-pnpm/src/index.ts",
         "assets": [
           "packages/nx-semantic-release-pnpm/*.md",
@@ -40,7 +39,7 @@
           {
             "input": "packages/nx-semantic-release-pnpm",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", "node_modules/**"],
+            "ignore": ["**/tsconfig*.json", "project.json", "node_modules/**", ".eslintrc.json"],
             "output": "/"
           }
         ]

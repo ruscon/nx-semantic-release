@@ -1,5 +1,5 @@
 export const promiseFilter = <T>(
-  array: T[],
+  array: readonly T[],
   predicate: (item: T) => Promise<boolean>
 ): Promise<T[]> =>
   Promise.all(

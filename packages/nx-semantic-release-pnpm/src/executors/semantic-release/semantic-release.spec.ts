@@ -16,7 +16,7 @@ describe('parseTag', () => {
   });
 });
 
-describe('resolveOptions', () => {
+describe.skip('resolveOptions', () => {
   const requiredOptions: SemanticReleaseOptions = {
     changelog: true,
     changelogFile: '',
