@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ruscon/nx-semantic-release-pnpm/compare/nx-semantic-release-pnpm-v1.0.1...nx-semantic-release-pnpm-v1.0.2) (2023-09-02)
+
+
+### Bug Fixes
+
+* deps ([0b90d16](https://github.com/ruscon/nx-semantic-release-pnpm/commit/0b90d16c70539c262096545e7b7df1061533b4e1))
+
 ## [1.0.1](https://github.com/ruscon/nx-semantic-release-pnpm/compare/nx-semantic-release-pnpm-v1.0.0...nx-semantic-release-pnpm-v1.0.1) (2023-08-31)
 
 
