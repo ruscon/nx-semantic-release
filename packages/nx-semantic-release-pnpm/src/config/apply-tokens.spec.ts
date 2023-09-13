@@ -5,6 +5,7 @@ import {
 } from './apply-tokens';
 
 const requiredOptions: SemanticReleaseOptions = {
+  repositoryUrl: '',
   changelog: true,
   changelogFile: '',
   commitMessage: '',

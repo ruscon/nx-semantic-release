@@ -33,6 +33,7 @@ describe.skip('Setup project', () => {
     assertProjectConfiguration({
       executor: '@ruscon/nx-semantic-release-pnpm:semantic-release',
       options: {
+        repositoryUrl: '',
         github: true,
         changelog: true,
         npm: true,
@@ -49,6 +50,7 @@ describe.skip('Setup project', () => {
     assertProjectConfiguration({
       executor: '@ruscon/nx-semantic-release-pnpm:semantic-release',
       options: {
+        repositoryUrl: '',
         github: false,
         changelog: false,
         npm: false,
