@@ -1,7 +1,7 @@
-import { Context } from "semantic-release";
+import { BaseContext } from "semantic-release";
 
 export const createFakeSemanticReleaseLogger = () =>
   ({
     log: jest.fn(),
     error: jest.fn(),
-  } as unknown as Context['logger']);
+  } as unknown as BaseContext['logger']);

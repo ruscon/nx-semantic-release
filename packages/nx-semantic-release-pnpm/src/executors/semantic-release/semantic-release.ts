@@ -9,8 +9,6 @@ import {
 import { cosmiconfigSync } from 'cosmiconfig';
 import type release from 'semantic-release';
 import {
-  Config,
-  Options,
   Options as BaseSemanticReleaseOptions,
   PluginSpec,
 } from 'semantic-release';
