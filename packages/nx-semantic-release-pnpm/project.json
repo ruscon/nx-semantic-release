@@ -62,6 +62,7 @@
         ],
         "buildTarget": "nx-semantic-release-pnpm:build",
         "repositoryUrl": "https://github.com/ruscon/nx-semantic-release-pnpm",
+        "commitMessage": "chore(release): ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}",
         "github": true,
         "outputPath": "dist/packages/nx-semantic-release-pnpm",
         "releaseRules": [

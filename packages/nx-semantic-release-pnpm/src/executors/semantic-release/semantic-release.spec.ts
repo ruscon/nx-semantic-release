@@ -18,6 +18,7 @@ describe('parseTag', () => {
 
 describe.skip('resolveOptions', () => {
   const requiredOptions: SemanticReleaseOptions = {
+    repositoryUrl: '',
     changelog: true,
     changelogFile: '',
     commitMessage: '',

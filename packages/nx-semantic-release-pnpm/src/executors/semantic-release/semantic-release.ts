@@ -25,6 +25,7 @@ export type SemanticReleaseOptions = Omit<
   BaseSemanticReleaseOptions,
   'extends'
 > & {
+  repositoryUrl: string;
   npm: boolean;
   github: boolean;
   buildTarget?: string;
