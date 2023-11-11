@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/nx-semantic-release-pnpm/**/*.ts"]
@@ -15,8 +15,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/nx-semantic-release-pnpm"],
       "options": {
-        "jestConfig": "packages/nx-semantic-release-pnpm/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/nx-semantic-release-pnpm/jest.config.ts"
       },
       "dependsOn": [
         {
@@ -39,7 +38,12 @@
           {
             "input": "packages/nx-semantic-release-pnpm",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", "node_modules/**", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              "node_modules/**",
+              ".eslintrc.json"
+            ],
             "output": "/"
           }
         ]
