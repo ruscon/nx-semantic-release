@@ -1,3 +1,10 @@
+## [1.0.7-beta.1](https://github.com/ruscon/nx-semantic-release-pnpm/compare/nx-semantic-release-pnpm-v1.0.6...nx-semantic-release-pnpm-v1.0.7-beta.1) (2024-01-09)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump ts-node from 10.0.0 to 10.9.2 ([1e6319d](https://github.com/ruscon/nx-semantic-release-pnpm/commit/1e6319db92702ce1d833364c9eedb6445da53f74))
+
 ## [1.0.6](https://github.com/ruscon/nx-semantic-release-pnpm/compare/nx-semantic-release-pnpm-v1.0.5...nx-semantic-release-pnpm-v1.0.6) (2023-09-13)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@ruscon/nx-semantic-release-pnpm",
-  "version": "1.0.6",
+  "version": "1.0.7-beta.1",
   "description": "Semantic release for NX with support ESM (PNPM version)",
   "publishConfig": {
     "access": "public",
